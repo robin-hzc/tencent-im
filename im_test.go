@@ -14,15 +14,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dobyte/tencent-im"
-	"github.com/dobyte/tencent-im/account"
-	"github.com/dobyte/tencent-im/group"
-	"github.com/dobyte/tencent-im/operation"
-	"github.com/dobyte/tencent-im/private"
-	"github.com/dobyte/tencent-im/profile"
-	"github.com/dobyte/tencent-im/push"
-	"github.com/dobyte/tencent-im/recentcontact"
-	"github.com/dobyte/tencent-im/sns"
+	"github.com/robin-hzc/tencent-im"
+	"github.com/robin-hzc/tencent-im/account"
+	"github.com/robin-hzc/tencent-im/group"
+	"github.com/robin-hzc/tencent-im/operation"
+	"github.com/robin-hzc/tencent-im/private"
+	"github.com/robin-hzc/tencent-im/profile"
+	"github.com/robin-hzc/tencent-im/push"
+	"github.com/robin-hzc/tencent-im/recentcontact"
+	"github.com/robin-hzc/tencent-im/sns"
 )
 
 const (
@@ -495,7 +495,7 @@ func TestIm_SNS_UpdateFriend(t *testing.T) {
 	friend := sns.NewFriend(test1)
 	friend.SetAddSource("android") // 忽略更新
 	friend.SetGroup("测试组")
-	friend.SetAddWording("更新单个好友")       // 忽略更新
+	friend.SetAddWording("更新单个好友") // 忽略更新
 	friend.SetAddTime(time.Now().Unix()) // 忽略更新
 	friend.SetRemark("更新单个好友")
 	friend.SetRemarkTime(time.Now().Unix()) // 忽略更新

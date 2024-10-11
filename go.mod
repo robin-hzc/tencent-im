@@ -1,5 +1,5 @@
-module github.com/dobyte/tencent-im
+module github.com/robin-hzc/tencent-im
 
-go 1.16
+go 1.19
 
-require github.com/dobyte/http v0.0.2
+require github.com/robin-hzc/http v0.0.5.1

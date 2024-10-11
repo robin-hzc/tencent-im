@@ -10,8 +10,8 @@ package group
 import (
 	"time"
 
-	"github.com/dobyte/tencent-im/internal/core"
-	"github.com/dobyte/tencent-im/internal/enum"
+	"github.com/robin-hzc/tencent-im/internal/core"
+	"github.com/robin-hzc/tencent-im/internal/enum"
 )
 
 var (
