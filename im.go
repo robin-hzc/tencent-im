@@ -54,6 +54,7 @@ type (
 	}
 
 	Options struct {
+		BaseUrl    string
 		AppId      int    // 应用SDKAppID，可在即时通信 IM 控制台 的应用卡片中获取。
 		AppSecret  string // 密钥信息，可在即时通信 IM 控制台 的应用详情页面中获取，具体操作请参见 获取密钥
 		UserId     string // 用户ID
@@ -113,6 +114,7 @@ type (
 
 func NewIM(opt *Options) IM {
 	return &im{opt: opt, client: core.NewClient(&core.Options{
+		BaseUrl:    opt.BaseUrl,
 		AppId:      opt.AppId,
 		AppSecret:  opt.AppSecret,
 		UserId:     opt.UserId,
