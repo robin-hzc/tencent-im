@@ -140,7 +140,7 @@ type (
 		MsgBody         []*types.MsgBody `json:"MsgBody"`         // 消息体
 		CloudCustomData string           `json:"CloudCustomData"` // 消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）
 		// 客户端自定义的数据结构
-		OfflinePushInfo OfflinePushInfo `json:"OfflinePushInfo"`
+		OfflinePushInfo OfflinePushInfo `json:"OfflinePushInfo"` // 离线推送消息
 	}
 
 	// BeforePrivateMessageSendResp 发单聊消息之前回调应答
@@ -148,6 +148,8 @@ type (
 		BaseResp
 		MsgBody         []*types.MsgBody `json:"MsgBody,omitempty"`         // （选填）App 修改之后的消息，如果没有，则默认使用用户发送的消息
 		CloudCustomData string           `json:"CloudCustomData,omitempty"` // （选填）经过 App 修改之后的消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到），即时通信 IM 后台将把修改后的消息发送给接收方
+		// 客户端自定义的数据结构
+		OfflinePushInfo OfflinePushInfo `json:"OfflinePushInfo"` // 离线推送消息
 	}
 
 	// AfterPrivateMessageSend 发单聊消息之后回调
