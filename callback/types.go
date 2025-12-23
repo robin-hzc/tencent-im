@@ -139,6 +139,8 @@ type (
 		OnlineOnlyFlag  int              `json:"OnlineOnlyFlag"`  // 在线消息，为1，否则为0
 		MsgBody         []*types.MsgBody `json:"MsgBody"`         // 消息体
 		CloudCustomData string           `json:"CloudCustomData"` // 消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）
+		// 客户端自定义的数据结构
+		OfflinePushInfo OfflinePushInfo `json:"OfflinePushInfo"`
 	}
 
 	// BeforePrivateMessageSendResp 发单聊消息之前回调应答
