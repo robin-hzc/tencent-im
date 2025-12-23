@@ -26,6 +26,9 @@ import (
 )
 
 const (
+	defaultBaseUrl = "https://adminapiger.im.qcloud.com"
+)
+const (
 	assistant     = "assistant"
 	accountPrefix = "test"
 	test1         = "test1"
@@ -41,6 +44,7 @@ const (
 
 func NewIM() im.IM {
 	return im.NewIM(&im.Options{
+		BaseUrl:    defaultBaseUrl,
 		AppId:      1400564830,
 		AppSecret:  "0d2a321b087fdb8fd5ed5ea14fe0489139086eb1b03541774fc9feeab8f2bfd3",
 		UserId:     "administrator",
@@ -495,7 +499,7 @@ func TestIm_SNS_UpdateFriend(t *testing.T) {
 	friend := sns.NewFriend(test1)
 	friend.SetAddSource("android") // 忽略更新
 	friend.SetGroup("测试组")
-	friend.SetAddWording("更新单个好友") // 忽略更新
+	friend.SetAddWording("更新单个好友")       // 忽略更新
 	friend.SetAddTime(time.Now().Unix()) // 忽略更新
 	friend.SetRemark("更新单个好友")
 	friend.SetRemarkTime(time.Now().Unix()) // 忽略更新

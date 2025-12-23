@@ -342,7 +342,7 @@ func (g *Group) checkNameArgError() error {
 		return errNotSetGroupName
 	}
 
-	if len(g.name) > 30 {
+	if len(g.name) > 100 {
 		return errGroupNameTooLong
 	}
 
